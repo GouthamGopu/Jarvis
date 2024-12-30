@@ -64,8 +64,7 @@ if __name__ == "__main__":
           audio = r.listen(source)
         print("Recognizing...")
         word=r.recognize_google(audio)
-        proccessCommand(word)
-        if(word.lower() == "jarvis"):
+        if "jarvis" in word.lower():
            speak("Hii sir,how can i help you")
            with sr.Microphone() as source:
             print("jarvis Active...")
@@ -73,5 +72,8 @@ if __name__ == "__main__":
             print("Recognizing...")
             command=r.recognize_google(audio)
             proccessCommand(command)
+        else :
+            proccessCommand(word)
+
     except Exception as e:
         print("Error {0}".format(e))
