@@ -5,6 +5,10 @@ import musicLibrary
 import urllib.parse
 
 
+def s():
+  pass
+
+
 engine = pyttsx3.init()
 
 def speak(text):
